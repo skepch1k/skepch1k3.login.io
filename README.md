@@ -1,5 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Site Title</title>
+</head>
+<body>
+    <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();
@@ -16,4 +23,5 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/102059410" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</body>
+</html>
