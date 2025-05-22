@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Мой проект - Основной сайт на WordPress</title>
+    <meta name="description" content="Промо-страница проекта. Основной сайт с блогом и услугами на WordPress">
+    <meta name="keywords" content="WordPress, блог, продвижение сайтов">
+    
+    <!-- Open Graph / Социальные метатеги -->
+    <meta property="og:title" content="Мой проект - Основной сайт на WordPress">
+    <meta property="og:description" content="Промо-страница проекта с переходом на WordPress-сайт">
+    <meta property="og:image" content="https://ваш-github-username.github.io/images/preview.jpg">
+    <meta property="og:url" content="https://ваш-github-username.github.io">
     
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
@@ -23,75 +31,202 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/102059410" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXX');
+    </script>
+
     <style>
+        :root {
+            --primary-color: #4CAF50;
+            --dark-color: #333;
+            --light-color: #f9f9f9;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: var(--light-color);
         }
         header {
-            background: #333;
+            background: var(--dark-color);
             color: #fff;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
         }
         nav {
             background: #444;
-            padding: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         nav a {
             color: #fff;
-            margin: 0 10px;
+            margin: 0 15px;
             text-decoration: none;
+            font-weight: bold;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: var(--primary-color);
         }
         .container {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
+            width: 85%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 25px;
             background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        .feature-card {
+            flex: 0 0 30%;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+        .blog-preview {
+            margin: 40px 0;
+        }
+        .subscribe {
+            background: #e9e9e9;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .subscribe input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .social {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .social a {
+            margin: 0 10px;
+            color: var(--dark-color);
+            font-size: 1.2rem;
         }
         footer {
             text-align: center;
-            padding: 1rem;
-            background: #333;
+            padding: 1.5rem;
+            background: var(--dark-color);
             color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .feature-card {
+                flex: 0 0 100%;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Это наш GitHub Pages сайт</h1>
+        <h1>Добро пожаловать в мой проект!</h1>
+        <p>Профессиональный сайт на WordPress с блогом и услугами</p>
     </header>
     
     <nav>
-        <a href="#home">Главная</a>
-        <a href="#about">О нас</a>
+        <a href="#main">Главная</a>
+        <a href="#features">Возможности</a>
+        <a href="#blog">Блог</a>
         <a href="#contact">Контакты</a>
+        <a href="https://ваш-wordpress-сайт.ru" target="_blank">Перейти на WordPress</a>
     </nav>
     
-    <div class="container">
-        <h2 id="home">Главная</h2>
-        <p>Это простой сайт GitHub Pages с включенным отслеживанием Яндекс.Метрика.</p>
+    <div class="container" id="main">
+        <h2>О проекте</h2>
+        <p>Это промо-страница моего основного сайта, созданного на WordPress. Здесь вы можете узнать о ключевых возможностях проекта и перейти на полную версию.</p>
         
-        <h2 id="about">О нас</h2>
-        <p>Эта страница размещена на GitHub Pages и использует Яндекс.Метрику для аналитики..</p>
+        <a href="https://ваш-wordpress-сайт.ru" class="btn">Перейти на основной сайт</a>
         
-        <h2 id="contact">Контакты</h2>
-        <p>Вы можете связаться со нами по адресу: <a href="mailto:ivan_noskofff@gmail.com">ivan_noskofff@gmail.com</a></p>
+        <div class="features" id="features">
+            <div class="feature-card">
+                <h3>Блог</h3>
+                <p>Актуальные статьи о веб-разработке, SEO и digital-маркетинге</p>
+            </div>
+            <div class="feature-card">
+                <h3>Услуги</h3>
+                <p>Профессиональная разработка и продвижение сайтов</p>
+            </div>
+            <div class="feature-card">
+                <h3>Контакты</h3>
+                <p>Свяжитесь со мной для сотрудничества</p>
+            </div>
+        </div>
+        
+        <div class="blog-preview" id="blog">
+            <h2>Последние статьи в блоге</h2>
+            <ul>
+                <li><a href="https://ваш-wordpress-сайт.ru/post1" target="_blank">Как создать сайт на WordPress: пошаговое руководство</a></li>
+                <li><a href="https://ваш-wordpress-сайт.ru/post2" target="_blank">10 способов продвижения сайта в 2024 году</a></li>
+                <li><a href="https://ваш-wordpress-сайт.ru/post3" target="_blank">SEO-оптимизация для начинающих</a></li>
+            </ul>
+            <a href="https://ваш-wordpress-сайт.ru/blog" class="btn" target="_blank">Все статьи</a>
+        </div>
+        
+        <div class="subscribe">
+            <h3>Подпишитесь на обновления</h3>
+            <p>Получайте новые статьи и советы на почту</p>
+            <form action="https://ваш-сервис.подписки" method="post">
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <button type="submit" class="btn">Подписаться</button>
+            </form>
+        </div>
+        
+        <div id="contact">
+            <h2>Контакты</h2>
+            <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+            <p>Телефон: +7 (123) 456-78-90</p>
+            
+            <div class="social">
+                <a href="https://facebook.com/ваша-страница" target="_blank">Facebook</a>
+                <a href="https://t.me/ваш-канал" target="_blank">Telegram</a>
+                <a href="https://vk.com/ваша-группа" target="_blank">VK</a>
+            </div>
+        </div>
     </div>
     
     <footer>
-        &copy; 2024 My GitHub Pages Site | Powered by GitHub Pages
+        &copy; 2024 Мой проект. Основной сайт: <a href="https://ваш-wordpress-сайт.ru" style="color: #4CAF50;">WordPress-версия</a>
     </footer>
 </body>
 </html>
